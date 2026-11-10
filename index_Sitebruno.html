@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Bruno Polato Ferreira, Analista de Produto Sênior com 15+ anos em crédito e serviços financeiros. +15% em vendas e −20% em incidentes no Banco Toyota. Campeão FIAP Startup One 2024.">
+<meta property="og:title" content="Bruno Polato Ferreira · Analista de Produto Sênior">
+<meta property="og:description" content="15+ anos em produtos de crédito. +15% em vendas, −20% em incidentes. Disponível para vagas no Brasil e internacionais remotas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brunopolatoferreira.com.br/">
+<link rel="canonical" href="https://brunopolatoferreira.com.br/">
+<style>body{margin:0;font-family:system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Bruno Polato Ferreira</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: página-currículo de leitura vertical; hero com tese + placar de resultados, seletor de vaga que destaca a trajetória, linha do tempo expansível. Bilíngue PT/EN. */
+:root{
+  --bg:#f5f6f9; --surface:#ffffff; --ink:#14213a; --muted:#56607a; --line:#dde1ea;
+  --accent:#9a6a10; --accent-soft:#f6ecd6; --navy:#14213a; --on-navy:#f3f0e8;
+  --dim:.38;
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1526; --surface:#142038; --ink:#e9ecf3; --muted:#9aa5bd; --line:#26324d;
+  --accent:#e2b35c; --accent-soft:#2a2a26; --navy:#0a1120; --on-navy:#f3f0e8; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0d1526; --surface:#142038; --ink:#e9ecf3; --muted:#9aa5bd; --line:#26324d;
+  --accent:#e2b35c; --accent-soft:#2a2a26; --navy:#0a1120; --on-navy:#f3f0e8; color-scheme:dark;}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.1}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.eyebrow{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+section{padding-block:72px}
+.sec-head{display:grid;gap:10px;margin-bottom:32px;max-width:680px}
+.sec-head p{color:var(--muted)}
+
+/* nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);color:var(--on-navy)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:12px}
+.brand{font-family:var(--f-display);font-weight:800;font-size:1.05rem;text-decoration:none;white-space:nowrap}
+.brand span{color:#e2b35c}
+.nav-right{display:flex;align-items:center;gap:18px}
+nav.links{display:flex;gap:18px;flex-wrap:wrap;font-size:.93rem}
+nav.links a{text-decoration:none;opacity:.82}
+nav.links a:hover{opacity:1;color:#e2b35c}
+.lang{display:inline-flex;border:1px solid #3d4b6a;border-radius:999px;overflow:hidden;flex:none}
+.lang button{font-family:var(--f-mono);font-size:.74rem;font-weight:600;letter-spacing:.06em;background:transparent;color:#c9cfdc;border:0;padding:6px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#e2b35c;color:#14213a}
+@media (max-width:820px){nav.links .opt{display:none}}
+@media (max-width:560px){nav.links{display:none}.brand{font-size:.98rem}}
+
+/* hero */
+.hero{background:var(--navy);color:var(--on-navy);padding-block:64px 56px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:end}
+.hero .eyebrow{color:#e2b35c}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.9rem);font-weight:800;letter-spacing:-.02em;margin-top:24px}
+.hero-id{display:flex;align-items:center;gap:18px}
+.portrait{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid #e2b35c;flex:none;background:#22304d}
+.hero-name{font-family:var(--f-display);font-weight:700;font-size:1.2rem;margin-bottom:4px}
+@media (max-width:420px){.portrait{width:80px;height:80px}}
+.hero h1 em{font-style:normal;color:#e2b35c}
+.hero .lede{margin-top:20px;max-width:560px;font-size:1.12rem;color:#c9cfdc}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font-family:var(--f-mono);font-size:.76rem;padding:6px 10px;border:1px solid #33415f;border-radius:999px;color:#d7dbe5}
+.chip.live{border-color:#e2b35c;color:#e2b35c}
+.chip.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#7fd19b;margin-right:7px;vertical-align:1px}
+.chip.intl{border-color:#5b7bb5;color:#b9cdf2}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-body);font-weight:600;font-size:1rem;padding:12px 20px;border-radius:8px;border:1px solid transparent;cursor:pointer;text-decoration:none}
+.btn.gold{background:#e2b35c;color:#14213a}
+.btn.gold:hover{background:#ecc275}
+.btn.ghost{background:transparent;color:var(--on-navy);border-color:#3d4b6a}
+.btn.ghost:hover{border-color:#e2b35c}
+
+/* scoreboard */
+.score{display:grid;grid-template-columns:1fr 1fr;border:1px solid #2c3a58;border-radius:14px;overflow:hidden}
+.score div{padding:22px 20px;border-right:1px solid #2c3a58;border-bottom:1px solid #2c3a58;min-width:0}
+.score div:nth-child(2n){border-right:0}
+.score div:nth-last-child(-n+2){border-bottom:0}
+.score b{display:block;font-family:var(--f-display);font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:#e2b35c;line-height:1;font-variant-numeric:tabular-nums}
+.score small{display:block;margin-top:8px;font-size:.88rem;color:#c3c9d6;line-height:1.35}
+.score-note{font-family:var(--f-mono);font-size:.72rem;color:#8d97ad;margin-top:10px}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+
+/* award */
+.award{background:var(--accent-soft);border-bottom:1px solid var(--line)}
+.award .wrap{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px 28px;padding-block:28px}
+.medal{width:64px;height:64px;border-radius:50%;background:#e2b35c;color:#14213a;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:1.5rem;box-shadow:0 0 0 6px color-mix(in srgb,#e2b35c 30%,transparent)}
+.award .eyebrow{display:block;margin-bottom:6px}
+.award h3{font-size:clamp(1.25rem,2.6vw,1.6rem)}
+.award p{color:var(--muted);margin-top:6px;max-width:640px}
+.award-steps{display:flex;gap:10px;flex-wrap:wrap}
+.award-steps span{font-family:var(--f-mono);font-size:.76rem;padding:6px 10px;border-radius:6px;background:var(--surface);border:1px solid var(--line);white-space:nowrap}
+.award-steps b{color:var(--accent)}
+@media (max-width:820px){.award .wrap{grid-template-columns:auto 1fr}.award-steps{grid-column:1/-1}}
+@media (max-width:440px){.award .wrap{grid-template-columns:1fr}.medal{width:52px;height:52px;font-size:1.2rem}}
+
+/* international band */
+.intl-band{background:var(--surface);border-bottom:1px solid var(--line)}
+.intl-band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-block:18px}
+.intl-band p{max-width:720px}
+.intl-band b{font-family:var(--f-display)}
+.intl-band a{color:var(--accent);font-weight:600;white-space:nowrap}
+
+/* fit selector */
+.fit{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:22px}
+.roles{display:flex;flex-wrap:wrap;gap:10px}
+.role{font-family:var(--f-body);font-size:.98rem;font-weight:600;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.role:hover{border-color:var(--accent)}
+.role[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.fit-out{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+.fit-out > div{min-width:0}
+.fit-out h3{margin-bottom:10px}
+.fit-out p{color:var(--muted)}
+.fit-out ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.fit-out li{display:flex;gap:10px;align-items:flex-start}
+.fit-out li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;background:var(--accent);transform:rotate(45deg)}
+.fit-cta{font-size:.92rem;color:var(--muted)}
+.fit-cta a{color:var(--accent);font-weight:600}
+@media (max-width:760px){.fit-out{grid-template-columns:1fr}}
+
+/* timeline */
+.tl{display:grid;gap:0;border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 28px 28px;transition:opacity .25s}
+.job::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
+.job.hl::before{background:var(--accent);border-color:var(--accent)}
+.job.dim{opacity:var(--dim)}
+.job-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.job.hl .job-card{border-color:var(--accent)}
+.job-top{display:grid;grid-template-columns:1fr auto;gap:6px 16px;width:100%;text-align:left;background:none;border:0;padding:18px 20px;cursor:pointer;color:inherit;font:inherit}
+.job-top > *{min-width:0}
+.job-when{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);grid-column:1/-1}
+.job-org{font-family:var(--f-display);font-weight:700;font-size:1.25rem}
+.job-role{color:var(--muted);font-size:.98rem;grid-column:1/2}
+.job-win{grid-column:1/2;margin-top:6px;font-weight:600}
+.job-win mark{background:var(--accent-soft);color:var(--ink);padding:1px 6px;border-radius:4px;font-family:var(--f-mono);font-size:.9em}
+.toggle{grid-column:2/3;grid-row:2/4;align-self:center;font-family:var(--f-mono);font-size:.78rem;color:var(--accent);white-space:nowrap}
+.job-body{padding:0 20px 20px;border-top:1px dashed var(--line)}
+.job-body ul{margin:16px 0 0;padding-left:20px;display:grid;gap:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.04em;padding:4px 8px;border-radius:5px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.early-label{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:6px 0 18px 28px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill{padding:22px;border-top:3px solid var(--ink);background:var(--surface);border-radius:0 0 10px 10px}
+.skill h3{margin-bottom:8px}
+.skill p{color:var(--muted);font-size:.98rem}
+@media (max-width:860px){.skills{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.skills{grid-template-columns:1fr}}
+
+/* edu */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.edu-item{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.edu-item:nth-child(odd){padding-right:24px}
+.edu-item:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}
+.edu-item > div{min-width:0}
+.edu-when{font-family:var(--f-mono);font-size:.8rem;color:var(--accent);font-weight:600}
+.edu-item b{display:block;font-family:var(--f-display);font-size:1.08rem}
+.edu-item span{color:var(--muted);font-size:.95rem}
+@media (max-width:760px){.edu{grid-template-columns:1fr}.edu-item:nth-child(n){padding-left:0;padding-right:0;border-left:0}}
+@media (max-width:420px){.edu-item{grid-template-columns:1fr;gap:4px}}
+
+/* contact */
+.contact{background:var(--navy);color:var(--on-navy)}
+.contact .eyebrow{color:#e2b35c}
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.contact p.lead{color:#c9cfdc;margin-top:14px;max-width:520px}
+.contact-list{display:grid;gap:12px}
+.c-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:14px 16px;border:1px solid #2c3a58;border-radius:10px}
+.c-row > div{min-width:0}
+.c-row small{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#8d97ad}
+.c-row span,.c-row a.val{overflow-wrap:anywhere;user-select:all}
+.c-actions{display:flex;gap:8px}
+.copy,.open{font-family:var(--f-mono);font-size:.76rem;background:transparent;color:#e2b35c;border:1px solid #4a4632;border-radius:6px;padding:6px 10px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.copy:hover,.open:hover{border-color:#e2b35c}
+footer{padding-block:24px;font-size:.85rem;color:#8d97ad;border-top:1px solid #1f2b45}
+@media (max-width:760px){.contact-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#topo">Bruno <span>Polato</span> Ferreira</a>
+    <div class="nav-right">
+      <nav class="links" aria-label="Seções">
+        <a href="#resultados" class="opt" data-i18n="nav1">Resultados</a>
+        <a href="#vaga" data-i18n="nav2">Sua vaga</a>
+        <a href="#trajetoria" data-i18n="nav3">Trajetória</a>
+        <a href="#formacao" class="opt" data-i18n="nav4">Formação</a>
+        <a href="#contato" data-i18n="nav5">Contato</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button id="lang-pt" data-lang="pt" aria-pressed="true">PT</button>
+        <button id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-id"><img class="portrait" src="data:image/jpeg;base64,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" width="104" height="104" alt="Foto de Bruno Polato Ferreira"><div><p class="hero-name">Bruno Polato Ferreira</p><p class="eyebrow" data-i18n="eyebrow">Produto digital · IA · Resultado</p></div></div>
+      <h1 data-i18n="h1">Conecto negócio e tecnologia para produtos digitais performarem melhor, <em>com IA no dia a dia</em>.</h1>
+      <p class="lede" data-i18n="lede">Analista de Produto Sênior com mais de 15 anos de experiência. Uso IA para descobrir, prototipar e entregar mais rápido, para que o produto venda mais e quebre menos.</p>
+      <div class="meta">
+        <span class="chip live" data-i18n="c1">Disponível para início imediato</span>
+        <span class="chip intl" data-i18n="c2">Aberto a vagas internacionais remotas</span>
+        <span class="chip" data-i18n="c3">Mogi das Cruzes · SP</span>
+        <span class="chip" data-i18n="c4">Remoto ou híbrido</span>
+        <span class="chip" data-i18n="c5">Inglês fluente</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn gold" href="#contato" data-i18n="cta1">Falar com o Bruno</a>
+        <a class="btn ghost" href="#vaga" data-i18n="cta2">Ver aderência à sua vaga</a>
+      </div>
+    </div>
+    <div id="resultados">
+      <div class="score">
+        <div><b data-count="15" data-prefix="+" data-suffix="%">+15%</b><small data-i18n="s1">em vendas no Banco Toyota com melhorias no front de digitação de propostas</small></div>
+        <div><b data-count="20" data-prefix="−" data-suffix="%">−20%</b><small data-i18n="s2">em incidentes no mesmo sistema, em 12 meses</small></div>
+        <div><b data-count="15" data-suffix="+">15+</b><small data-i18n="s3">anos em produtos e serviços financeiros</small></div>
+        <div><b data-count="7">7</b><small data-i18n="s4">instituições, incluindo uma no exterior (Irlanda)</small></div>
+      </div>
+      <p class="score-note" data-i18n="snote">★ Campeão FIAP Startup One · 1ª temporada 2024</p>
+    </div>
+  </div>
+</div>
+
+<div class="award" id="premio">
+  <div class="wrap">
+    <div class="medal" aria-hidden="true">1º</div>
+    <div data-i18n="aw"><span class="eyebrow">Premiação</span><h3>Campeão do FIAP Startup One · 1ª temporada de 2024</h3><p>Como cofundador da ParkingPass, venci a competição de startups da FIAP. O prêmio levou o time a um programa de empreendedorismo no Babson College, referência mundial no tema, em 2025.</p></div>
+    <div class="award-steps" data-i18n="aw-steps"><span><b>2024</b> · 1º lugar FIAP</span><span><b>2025</b> · Babson College (EUA)</span></div>
+  </div>
+</div>
+
+<div class="intl-band">
+  <div class="wrap">
+    <p data-i18n="intl"><b>Disponível para vagas internacionais em formato remoto.</b> Inglês fluente e mais de dois anos em banco europeu, em ambiente multicultural.</p>
+    <a href="#contato" data-i18n="intlcta">Entrar em contato →</a>
+  </div>
+</div>
+
+<section id="vaga">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="v-eye">Para recrutadores</p>
+      <h2 data-i18n="v-h">Qual vaga você está preenchendo?</h2>
+      <p data-i18n="v-p">Escolha o perfil e a trajetória abaixo destaca as experiências que mais conversam com ele.</p>
+    </div>
+    <div class="fit">
+      <div class="roles" role="group" aria-label="Perfil da vaga">
+        <button class="role" id="r-produto" data-role="produto" aria-pressed="true" data-i18n="r1">Analista de Produtos</button>
+        <button class="role" id="r-projetos" data-role="projetos" aria-pressed="false" data-i18n="r2">Analista de Projetos</button>
+        <button class="role" id="r-comercial" data-role="comercial" aria-pressed="false" data-i18n="r3">Planejamento Comercial</button>
+        <button class="role" id="r-po" data-role="po" aria-pressed="false" data-i18n="r4">Product Owner / PM</button>
+        <button class="role" id="r-todas" data-role="todas" aria-pressed="false" data-i18n="r5">Ver tudo</button>
+      </div>
+      <div class="fit-out" aria-live="polite">
+        <div>
+          <h3 id="fit-title"></h3>
+          <p id="fit-text"></p>
+        </div>
+        <div><ul id="fit-list"></ul></div>
+      </div>
+      <p class="fit-cta" data-i18n="fitcta">Vaga com outro nome, mas pedindo experiência parecida? <a href="#contato">Vamos conversar.</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="trajetoria" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="t-eye">Trajetória</p>
+      <h2 data-i18n="t-h">Experiência, do mais recente ao mais antigo</h2>
+      <p data-i18n="t-p">Clique em cada empresa para ver o detalhe das entregas.</p>
+    </div>
+
+    <div class="tl" id="tl">
+      <article class="job" data-tags="produto po projetos">
+        <div class="job-card">
+          <button class="job-top" id="j-bradesco" aria-expanded="false">
+            <span class="job-when" data-i18n="b-when">jun 2026 – ago 2026</span>
+            <span class="job-org">Banco Bradesco</span>
+            <span class="job-role" data-i18n="b-role">Product Owner Sênior · Squad de crédito</span>
+            <span class="job-win" data-i18n="b-win">CCB digital com assinatura biométrica e validação de autenticidade</span>
+            <span class="toggle">+ detalhes</span>
+          </button>
+          <div class="job-body" hidden>
+            <ul data-i18n="b-list">
+              <li>Conduziu a iniciativa de Cédula de Crédito Bancário digital: captura de foto biométrica, geolocalização e hash criptográfico para garantir a autenticidade do contrato.</li>
+              <li>Produziu as evidências de homologação e o deck executivo da iniciativa a partir das gravações de teste.</li>
+              <li>Criou um agente de IA no Microsoft Copilot Studio para apoiar POs em todo o ciclo de projeto, da abertura no Jira à governança interna.</li>
+            </ul>
+            <div class="tags" data-i18n="b-tags"><span class="tag">Crédito</span><span class="tag">Backlog & Jira</span><span class="tag">IA aplicada</span><span class="tag">Homologação</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="job" data-tags="produto projetos comercial po">
+        <div class="job-card">
+          <button class="job-top" id="j-toyota" aria-expanded="true">
+            <span class="job-when">2024 – 2026</span>
+            <span class="job-org">Banco Toyota do Brasil</span>
+            <span class="job-role" data-i18n="ty-role">Analista Sênior de Produto e Melhoria de Processos</span>
+            <span class="job-win" data-i18n="ty-win"><mark>+15% vendas</mark> <mark>−20% incidentes</mark> em 12 meses</span>
+            <span class="toggle">− fechar</span>
+          </button>
+          <div class="job-body">
+            <ul data-i18n="ty-list">
+              <li>Liderou de ponta a ponta a integração do sistema FANDI, alinhando áreas de negócio, TI e fornecedor até a entrada em produção.</li>
+              <li>Entregou melhorias contínuas no front de digitação de propostas de financiamento, que elevaram as vendas em 15% e reduziram os incidentes em 20% ao longo de 12 meses.</li>
+              <li>Mapeou e redesenhou processos da esteira de crédito com foco em experiência de uso e estabilidade.</li>
+            </ul>
+            <div class="tags" data-i18n="ty-tags"><span class="tag">Integração de sistemas</span><span class="tag">Melhoria contínua</span><span class="tag">Financiamento de veículos</span><span class="tag">Stakeholders</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="job" data-tags="produto comercial">
+        <div class="job-card">
+          <button class="job-top" id="j-yamaha" aria-expanded="false">
+            <span class="job-when">2022 – 2024</span>
+            <span class="job-org">Banco Yamaha Motor do Brasil</span>
+            <span class="job-role" data-i18n="y-role">Analista de Produto Pleno</span>
+            <span class="job-win" data-i18n="y-win">Produtos de crédito para financiamento de motocicletas</span>
+            <span class="toggle">+ detalhes</span>
+          </button>
+          <div class="job-body" hidden>
+            <ul data-i18n="y-list">
+              <li>Atuou na gestão e evolução de produtos de crédito ao consumidor e dos sistemas que os sustentam.</li>
+              <li>Traduziu necessidades de negócio em requisitos para tecnologia e acompanhou as entregas até a operação.</li>
+            </ul>
+            <div class="tags" data-i18n="y-tags"><span class="tag">Crédito ao consumidor</span><span class="tag">Requisitos</span><span class="tag">Sistemas</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="job" data-tags="produto po">
+        <div class="job-card">
+          <button class="job-top" id="j-creditas" aria-expanded="false">
+            <span class="job-when">2021 – 2022</span>
+            <span class="job-org">Creditas</span>
+            <span class="job-role" data-i18n="cr-role">Analista de Operações de Produto</span>
+            <span class="job-win" data-i18n="cr-win">Operação de produto em fintech de crédito com garantia</span>
+            <span class="toggle">+ detalhes</span>
+          </button>
+          <div class="job-body" hidden>
+            <ul data-i18n="cr-list">
+              <li>Ponte entre squads de produto e operação, garantindo que as entregas funcionassem no dia a dia.</li>
+              <li>Vivência em cultura ágil e orientada a dados de uma das maiores fintechs de crédito do país.</li>
+            </ul>
+            <div class="tags" data-i18n="cr-tags"><span class="tag">Fintech</span><span class="tag">Product Ops</span><span class="tag">Ágil</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="job" data-tags="projetos">
+        <div class="job-card">
+          <button class="job-top" id="j-aib" aria-expanded="false">
+            <span class="job-when">2018 – 2021</span>
+            <span class="job-org" data-i18n="a-org">AIB · Allied Irish Banks (Irlanda)</span>
+            <span class="job-role">Customer Operations Specialist</span>
+            <span class="job-win" data-i18n="a-win">Mais de 2 anos em banco europeu, trabalhando 100% em inglês</span>
+            <span class="toggle">+ detalhes</span>
+          </button>
+          <div class="job-body" hidden>
+            <ul data-i18n="a-list">
+              <li>Operação bancária com clientes em um dos maiores bancos da Irlanda.</li>
+              <li>Experiência com processos, controles e padrões de atendimento europeus em ambiente multicultural.</li>
+            </ul>
+            <div class="tags" data-i18n="a-tags"><span class="tag">Internacional</span><span class="tag">Operações</span><span class="tag">Inglês</span></div>
+          </div>
+        </div>
+      </article>
+
+      <p class="early-label" data-i18n="early">Início de carreira</p>
+
+      <article class="job" data-tags="comercial">
+        <div class="job-card">
+          <button class="job-top" id="j-visa" aria-expanded="false">
+            <span class="job-when">2016</span>
+            <span class="job-org">Visa</span>
+            <span class="job-role" data-i18n="v-role">Consultor de Produto</span>
+            <span class="job-win" data-i18n="v-win">Produtos de meios de pagamento</span>
+            <span class="toggle">+ detalhes</span>
+          </button>
+          <div class="job-body" hidden>
+            <ul data-i18n="v-list"><li>Consultoria em produtos de pagamento junto a parceiros e emissores.</li></ul>
+            <div class="tags" data-i18n="v-tags"><span class="tag">Pagamentos</span><span class="tag">Parceiros</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="job" data-tags="comercial">
+        <div class="job-card">
+          <button class="job-top" id="j-itau" aria-expanded="false">
+            <span class="job-when">2012 – 2013</span>
+            <span class="job-org">Itaú Unibanco</span>
+            <span class="job-role" data-i18n="i-role">Analista Pleno · Cash Management e Private Banking</span>
+            <span class="job-win" data-i18n="i-win">Atendimento a segmentos de alta renda e empresas</span>
+            <span class="toggle">+ detalhes</span>
+          </button>
+          <div class="job-body" hidden>
+            <ul data-i18n="i-list"><li>Suporte a produtos de gestão de caixa para empresas e a clientes do Private Banking.</li></ul>
+            <div class="tags" data-i18n="i-tags"><span class="tag">Cash Management</span><span class="tag">Alta renda</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="k-eye">Como eu trabalho</p>
+      <h2 data-i18n="k-h">O que eu levo para o seu time</h2>
+    </div>
+    <div class="skills">
+      <div class="skill" data-i18n="k1"><h3>Crédito de ponta a ponta</h3><p>Da proposta à formalização do contrato: digitação, análise, CCB e as integrações entre sistemas que fazem a esteira rodar.</p></div>
+      <div class="skill" data-i18n="k2"><h3>Melhoria medida em número</h3><p>Defino o indicador antes da entrega e acompanho depois. Foi assim que chegamos a +15% em vendas e −20% em incidentes.</p></div>
+      <div class="skill" data-i18n="k3"><h3>Ponte entre áreas</h3><p>Anos de bancos grandes ensinam a alinhar negócio, TI, operação e fornecedores sem perder o prazo de vista.</p></div>
+      <div class="skill" data-i18n="k4"><h3>IA no dia a dia</h3><p>Crio agentes e protótipos funcionais com IA para validar ideias rápido, antes de mobilizar a engenharia.</p></div>
+      <div class="skill" data-i18n="k5"><h3>Visão de dono</h3><p>Cofundador da ParkingPass, campeã da 1ª temporada de 2024 do FIAP Startup One, conquista que nos levou ao Babson College (EUA) em 2025.</p></div>
+      <div class="skill" data-i18n="k6"><h3>Repertório internacional</h3><p>Mais de dois anos em banco irlandês e inglês fluente com certificado Cambridge FCE.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="formacao" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="e-eye">Formação</p>
+      <h2 data-i18n="e-h">Formação e certificações</h2>
+    </div>
+    <div class="edu">
+      <div class="edu-item"><span class="edu-when">MBA</span><div><b>Product Management e Growth Hacking</b><span>FIAP</span></div></div>
+      <div class="edu-item"><span class="edu-when">MBA</span><div data-i18n="e2"><b>Gestão de Projetos</b><span>Fundação Getulio Vargas (FGV)</span></div></div>
+      <div class="edu-item"><span class="edu-when">2025</span><div data-i18n="e3"><b>Programa de empreendedorismo</b><span>Babson College (EUA) · prêmio pela vitória no FIAP Startup One</span></div></div>
+      <div class="edu-item"><span class="edu-when">2005–2009</span><div data-i18n="e4"><b>Bacharelado em Administração</b><span>Universidade Cruzeiro do Sul</span></div></div>
+      <div class="edu-item"><span class="edu-when" data-i18n="e5w">Idioma</span><div data-i18n="e5"><b>Inglês fluente</b><span>Cambridge First Certificate (FCE)</span></div></div>
+      <div class="edu-item"><span class="edu-when" data-i18n="e6w">Conteúdo</span><div data-i18n="e6"><b>Série diária sobre produto e IA</b><span>Publicada no LinkedIn em dias úteis</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow" data-i18n="ct-eye">Contato</p>
+      <h2 style="margin-top:10px" data-i18n="ct-h">Tem uma vaga em produto, projetos ou planejamento?</h2>
+      <p class="lead" data-i18n="ct-p">Disponível para início imediato. No Brasil, em formato remoto ou híbrido a partir de Mogi das Cruzes e região de São Paulo. Para empresas de fora do país, em formato 100% remoto.</p>
+    </div>
+    <div class="contact-list">
+      <div class="c-row"><div><small>WhatsApp</small><span id="wa">+55 11 98969-9431</span></div><div class="c-actions"><a class="open" href="https://wa.me/5511989699431" target="_blank" rel="noopener" data-i18n="wa-open">Abrir</a><button class="copy" id="copy-wa" data-target="wa">Copiar</button></div></div>
+      <div class="c-row"><div><small>E-mail</small><span id="mail">bruno.polato.ferreira@gmail.com</span></div><button class="copy" id="copy-mail" data-target="mail">Copiar</button></div>
+      <div class="c-row"><div><small>LinkedIn</small><a class="val" href="https://www.linkedin.com/in/bruno-polato-ferreira" target="_blank" rel="noopener" id="li">www.linkedin.com/in/bruno-polato-ferreira</a></div><button class="copy" id="copy-li" data-target="li">Copiar</button></div>
+    </div>
+  </div>
+  <footer><div class="wrap" data-i18n="foot">Bruno Polato Ferreira · Analista de Produto Sênior · Mogi das Cruzes, SP · Aberto a vagas remotas internacionais</div></footer>
+</section>
+
+<script>
+const EN = {
+  nav1:"Results", nav2:"Your role", nav3:"Experience", nav4:"Education", nav5:"Contact",
+  eyebrow:"Digital product · AI · Results",
+  h1:"I connect business and technology so digital products perform better, <em>with AI in everyday work</em>.",
+  lede:"Senior Product Analyst with 15+ years of experience. I use AI to discover, prototype and ship faster, so products sell more and break less.",
+  c1:"Available to start immediately", c2:"Open to international remote roles", c3:"São Paulo area · Brazil", c4:"Remote or hybrid", c5:"Fluent English",
+  cta1:"Contact Bruno", cta2:"See fit for your role",
+  s1:"sales lift at Banco Toyota from improvements to the loan application front end",
+  s2:"fewer incidents on the same system, over 12 months",
+  s3:"years in financial products and services",
+  s4:"institutions, including one abroad (Ireland)",
+  snote:"★ Winner · FIAP Startup One, 2024 first season",
+  aw:"<span class=\"eyebrow\">Award</span><h3>Winner of FIAP Startup One · 2024 first season</h3><p>As co-founder of ParkingPass, I won FIAP's startup competition. The prize took the team to an entrepreneurship program at Babson College, a global reference in the field, in 2025.</p>",
+  "aw-steps":"<span><b>2024</b> · 1st place FIAP</span><span><b>2025</b> · Babson College (USA)</span>",
+  intl:"<b>Available for international remote roles.</b> Fluent English and 2+ years at a European bank in a multicultural team. Based in Brazil (UTC−3).",
+  intlcta:"Get in touch →",
+  "v-eye":"For recruiters", "v-h":"Which role are you hiring for?", "v-p":"Pick a profile and the timeline below highlights the most relevant experience.",
+  r1:"Product Analyst", r2:"Project Analyst", r3:"Commercial Planning", r4:"Product Owner / PM", r5:"Show all",
+  fitcta:"Different job title, similar requirements? <a href=\"#contato\">Let's talk.</a>",
+  "t-eye":"Experience", "t-h":"Career, most recent first", "t-p":"Click each company to see what was delivered.",
+  "b-when":"Jun 2026 – Aug 2026", "b-role":"Senior Product Owner · Credit squad", "b-win":"Digital loan agreement (CCB) with biometric signing and authenticity checks",
+  "b-list":"<li>Led the digital bank credit note (CCB) initiative: biometric photo capture, geolocation and cryptographic hashing to guarantee contract authenticity.</li><li>Produced the UAT evidence and the executive deck for the initiative from test recordings.</li><li>Built an AI agent in Microsoft Copilot Studio to support POs across the project lifecycle, from Jira intake to internal governance.</li>",
+  "b-tags":"<span class=\"tag\">Credit</span><span class=\"tag\">Backlog & Jira</span><span class=\"tag\">Applied AI</span><span class=\"tag\">UAT</span>",
+  "ty-role":"Senior Product & Process Improvement Analyst", "ty-win":"<mark>+15% sales</mark> <mark>−20% incidents</mark> in 12 months",
+  "ty-list":"<li>Led the FANDI system integration end to end, aligning business, IT and the vendor through go-live.</li><li>Delivered continuous improvements to the financing application front end, raising sales by 15% and cutting incidents by 20% over 12 months.</li><li>Mapped and redesigned credit journey processes with a focus on usability and stability.</li>",
+  "ty-tags":"<span class=\"tag\">Systems integration</span><span class=\"tag\">Continuous improvement</span><span class=\"tag\">Auto finance</span><span class=\"tag\">Stakeholders</span>",
+  "y-role":"Product Analyst", "y-win":"Credit products for motorcycle financing",
+  "y-list":"<li>Managed and evolved consumer credit products and the systems behind them.</li><li>Translated business needs into requirements for technology and followed deliveries through to operations.</li>",
+  "y-tags":"<span class=\"tag\">Consumer credit</span><span class=\"tag\">Requirements</span><span class=\"tag\">Systems</span>",
+  "cr-role":"Product Operations Analyst", "cr-win":"Product operations at a secured-lending fintech",
+  "cr-list":"<li>Bridged product squads and operations so that deliveries worked day to day.</li><li>Hands-on experience with the agile, data-driven culture of one of Brazil's largest credit fintechs.</li>",
+  "cr-tags":"<span class=\"tag\">Fintech</span><span class=\"tag\">Product Ops</span><span class=\"tag\">Agile</span>",
+  "a-org":"AIB · Allied Irish Banks (Ireland)", "a-win":"2+ years at a European bank, working fully in English",
+  "a-list":"<li>Customer banking operations at one of Ireland's largest banks.</li><li>Experience with European processes, controls and service standards in a multicultural team.</li>",
+  "a-tags":"<span class=\"tag\">International</span><span class=\"tag\">Operations</span><span class=\"tag\">English</span>",
+  early:"Early career",
+  "v-role":"Product Consultant", "v-win":"Payment products",
+  "v-list":"<li>Consulting on payment products with partners and issuers.</li>",
+  "v-tags":"<span class=\"tag\">Payments</span><span class=\"tag\">Partners</span>",
+  "i-role":"Analyst · Cash Management & Private Banking", "i-win":"Serving high-net-worth and corporate segments",
+  "i-list":"<li>Supported corporate cash management products and Private Banking clients.</li>",
+  "i-tags":"<span class=\"tag\">Cash Management</span><span class=\"tag\">High net worth</span>",
+  "k-eye":"How I work", "k-h":"What I bring to your team",
+  k1:"<h3>End-to-end credit</h3><p>From application to signed contract: data entry, underwriting, loan agreements and the system integrations that keep the journey running.</p>",
+  k2:"<h3>Improvement you can measure</h3><p>I define the metric before delivery and track it afterwards. That is how we reached +15% in sales and −20% in incidents.</p>",
+  k3:"<h3>Bridge between teams</h3><p>Years at large banks taught me to align business, IT, operations and vendors without losing sight of deadlines.</p>",
+  k4:"<h3>AI in daily work</h3><p>I build AI agents and working prototypes to validate ideas quickly, before engineering is involved.</p>",
+  k5:"<h3>Ownership mindset</h3><p>Co-founder of ParkingPass, winner of the 2024 first season of FIAP Startup One, which took us to Babson College (USA) in 2025.</p>",
+  k6:"<h3>International background</h3><p>2+ years at an Irish bank and fluent English with the Cambridge FCE certificate.</p>",
+  "e-eye":"Education", "e-h":"Education & certifications",
+  e2:"<b>Project Management</b><span>Fundação Getulio Vargas (FGV)</span>",
+  e3:"<b>Entrepreneurship program</b><span>Babson College (USA) · prize for winning FIAP Startup One</span>",
+  e4:"<b>Bachelor's in Business Administration</b><span>Universidade Cruzeiro do Sul</span>",
+  e5w:"Language", e5:"<b>Fluent English</b><span>Cambridge First Certificate (FCE)</span>",
+  e6w:"Content", e6:"<b>Daily series on product and AI</b><span>Published on LinkedIn every weekday</span>",
+  "ct-eye":"Contact", "ct-h":"Hiring for product, projects or planning?",
+  "ct-p":"Available to start immediately. For companies abroad, fully remote. In Brazil, remote or hybrid from the São Paulo area.",
+  "wa-open":"Open",
+  foot:"Bruno Polato Ferreira · Senior Product Analyst · São Paulo area, Brazil · Open to international remote roles"
+};
+const FIT = {
+  pt:{
+    produto:{t:"Analista de Produtos (Pleno/Sênior)",p:"Mais de quatro anos seguidos como analista de produto em bancos de crédito, com resultado medido e histórico de evoluir sistemas que já estão em produção.",l:["+15% em vendas e −20% em incidentes no Banco Toyota","Produtos de crédito em três bancos e uma fintech","Discovery, requisitos e acompanhamento até a operação","MBA em Product Management (FIAP)"]},
+    projetos:{t:"Analista de Projetos",p:"Já conduzi integrações de sistema de ponta a ponta envolvendo negócio, TI e fornecedor, com formação específica em gestão de projetos.",l:["Integração do sistema FANDI liderada do início à entrada em produção","Homologação e documentação de entregas no Bradesco","MBA em Gestão de Projetos (FGV)","Operação em banco europeu, com processos e controles rigorosos"]},
+    comercial:{t:"Planejamento Comercial",p:"Entendo a ponta que vende: minhas melhorias no fluxo de propostas viraram aumento direto de vendas, e conheço crédito, pagamentos e alta renda.",l:["+15% em vendas a partir de melhorias no front de propostas","Financiamento de veículos (Toyota e Yamaha)","Pagamentos na Visa e alta renda no Itaú","Leitura de indicadores para decidir prioridades"]},
+    po:{t:"Product Owner / Product Manager",p:"Atuei como PO Sênior em squad de crédito e uso IA para acelerar o trabalho do time. Também já fui fundador e sei o que é priorizar com pouco recurso.",l:["PO Sênior no Bradesco: CCB digital com biometria","Agente de IA para apoiar POs no ciclo de projeto","Cofundador da ParkingPass, campeã do FIAP Startup One (1ª temporada 2024)","Cultura ágil vivida em banco grande e em fintech"]},
+    todas:{t:"Trajetória completa",p:"Mais de 15 anos em serviços financeiros, do atendimento e operação até produto e projetos, no Brasil e na Irlanda.",l:["7 instituições financeiras","Crédito, pagamentos e operações bancárias","Dois MBAs: FGV e FIAP","Inglês fluente e vivência internacional"]}
+  },
+  en:{
+    produto:{t:"Product Analyst (Mid/Senior)",p:"4+ consecutive years as a product analyst at credit banks, with measured results and a track record of evolving systems already in production.",l:["+15% sales and −20% incidents at Banco Toyota","Credit products at three banks and one fintech","Discovery, requirements and follow-through to operations","MBA in Product Management (FIAP)"]},
+    projetos:{t:"Project Analyst",p:"I have led end-to-end system integrations involving business, IT and vendors, backed by formal training in project management.",l:["FANDI integration led from kickoff to go-live","UAT and delivery documentation at Bradesco","MBA in Project Management (FGV)","Operations at a European bank with rigorous processes and controls"]},
+    comercial:{t:"Commercial Planning",p:"I understand the sales side: my improvements to the application flow translated directly into higher sales, and I know credit, payments and high-net-worth segments.",l:["+15% sales from improvements to the application front end","Auto finance (Toyota and Yamaha)","Payments at Visa and high-net-worth clients at Itaú","Using metrics to set priorities"]},
+    po:{t:"Product Owner / Product Manager",p:"Senior PO in a credit squad, using AI to speed up the team's work. As a founder, I also know how to prioritize with limited resources.",l:["Senior PO at Bradesco: digital loan agreement with biometrics","AI agent supporting POs across the project lifecycle","Co-founder of ParkingPass, winner of FIAP Startup One (2024 first season)","Agile experience at a large bank and at a fintech"]},
+    todas:{t:"Full career",p:"15+ years in financial services, from customer operations to product and projects, in Brazil and Ireland.",l:["7 financial institutions","Credit, payments and banking operations","Two MBAs: FGV and FIAP","Fluent English and international experience"]}
+  }
+};
+const UI = {pt:{more:"+ detalhes",less:"− fechar",copy:"Copiar",copied:"Copiado",sel:"Selecionado"},en:{more:"+ details",less:"− close",copy:"Copy",copied:"Copied",sel:"Selected"}};
+
+const PT = {};
+document.querySelectorAll('[data-i18n]').forEach(el=>PT[el.dataset.i18n]=el.innerHTML);
+let lang='pt', role='produto';
+const jobs=[...document.querySelectorAll('.job')];
+
+function renderFit(){
+  const f=FIT[lang][role];
+  document.getElementById('fit-title').textContent=f.t;
+  document.getElementById('fit-text').textContent=f.p;
+  const ul=document.getElementById('fit-list'); ul.innerHTML='';
+  f.l.forEach(x=>{const li=document.createElement('li');li.textContent=x;ul.appendChild(li)});
+}
+function setRole(r){
+  role=r;
+  document.querySelectorAll('.role').forEach(b=>b.setAttribute('aria-pressed',b.dataset.role===r));
+  renderFit();
+  jobs.forEach(j=>{
+    const on=r==='todas'||j.dataset.tags.split(' ').includes(r);
+    j.classList.toggle('hl',on&&r!=='todas'); j.classList.toggle('dim',!on);
+  });
+  try{localStorage.setItem('bpf-role',r)}catch(e){}
+}
+function setLang(l){
+  lang=l; document.documentElement.lang = l==='en'?'en':'pt-BR';
+  const dict = l==='en'?EN:PT;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=dict[el.dataset.i18n]; if(v!==undefined) el.innerHTML=v;});
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===l));
+  document.querySelectorAll('.job-top').forEach(b=>{b.querySelector('.toggle').textContent=b.getAttribute('aria-expanded')==='true'?UI[l].less:UI[l].more});
+  document.querySelectorAll('.copy').forEach(b=>b.textContent=UI[l].copy);
+  renderFit();
+  try{localStorage.setItem('bpf-lang',l)}catch(e){}
+}
+document.querySelectorAll('.role').forEach(b=>b.addEventListener('click',()=>setRole(b.dataset.role)));
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>{
+  setLang(b.dataset.lang);
+  try{history.replaceState(null,'',b.dataset.lang==='en'?'#en':'#pt')}catch(e){}
+}));
+window.addEventListener('hashchange',()=>{const h=location.hash.slice(1); if(h==='en'||h==='pt') setLang(h);});
+
+document.querySelectorAll('.job-top').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const body=btn.nextElementSibling, open=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',!open); body.hidden=open;
+    btn.querySelector('.toggle').textContent=open?UI[lang].more:UI[lang].less;
+  });
+});
+
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const el=document.getElementById(b.dataset.target), txt=el.textContent.trim();
+  const done=()=>{b.textContent=UI[lang].copied;setTimeout(()=>b.textContent=UI[lang].copy,1600)};
+  const fallback=()=>{const s=window.getSelection(),r=document.createRange();r.selectNodeContents(el);s.removeAllRanges();s.addRange(r);b.textContent=UI[lang].sel};
+  try{navigator.clipboard.writeText(txt).then(done,fallback)}catch(e){fallback()}
+}));
+
+// idioma inicial: #en no link > escolha salva > português
+let startLang='pt', startRole='produto';
+try{startLang=localStorage.getItem('bpf-lang')||'pt'; startRole=localStorage.getItem('bpf-role')||'produto'}catch(e){}
+const h0=location.hash.slice(1); if(h0==='en'||h0==='pt') startLang=h0;
+setRole(FIT.pt[startRole]?startRole:'produto');
+setLang(startLang==='en'?'en':'pt');
+
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const n=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';let t0=null;
+    const step=ts=>{t0??=ts;const k=Math.min(1,(ts-t0)/900);el.textContent=pre+Math.round(n*(1-Math.pow(1-k,3)))+suf;if(k<1)requestAnimationFrame(step)};
+    requestAnimationFrame(step);
+  });
+}
+</script>
+
+</body>
+</html>
